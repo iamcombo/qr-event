@@ -2,9 +2,9 @@ const { Keyring, WsProvider, ApiPromise } = require('@polkadot/api');
 
 async function SubmitTrx({ destination }) {
   try {
-    const ws = new WsProvider('wss://rpc-testnet.selendra.org');
+    const ws = new WsProvider('wss://rpc-mainnet.selendra.org');
     const api = await ApiPromise.create({ provider: ws });
-
+    
     const keyring = new Keyring({
       type: 'sr25519',
       ss58Format: 204
